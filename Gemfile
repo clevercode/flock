@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.2'
 
 gem 'pg'
 gem 'haml-rails'
@@ -23,4 +23,5 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'shoulda-matchers', '~> 1.0.0'
 end

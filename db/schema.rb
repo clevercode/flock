@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120318072205) do
+ActiveRecord::Schema.define(:version => 20120318072803) do
+
+  create_table "memberships", :force => true do |t|
+    t.integer "team_id",                    :null => false
+    t.integer "user_id",                    :null => false
+    t.boolean "admin",   :default => false
+  end
 
   create_table "teams", :force => true do |t|
     t.string "name"
