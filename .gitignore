@@ -19,3 +19,6 @@
 
 # Ignore the bundled gems
 /vendor/ruby
+
+# Ignore the database config
+config/database.yml
