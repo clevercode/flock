@@ -4,6 +4,7 @@ gem 'rails', '3.2.2'
 
 gem 'pg'
 gem 'haml-rails'
+gem "high_voltage"
 
 gem 'devise', '~> 2.0.4'
 
