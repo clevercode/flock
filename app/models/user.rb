@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   has_many :teams,
            :through => :memberships
 
+  # Validations
+
+  validate :email, uniqueness: true
+
 end
