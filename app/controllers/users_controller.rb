@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     else
       flash[:notice] = "We couldn't create your flock account, sorry about that."
     end
-    redirect_to root_path
+    redirect_to root_url
   end
 
   def edit
