@@ -12,6 +12,6 @@ class User < ActiveRecord::Base
 
   # Validations
 
-  validate :email, uniqueness: true
+  validates :email, uniqueness: true
 
 end
