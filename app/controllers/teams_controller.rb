@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
   respond_to :html
 
   def index
-    @team = current_user.teams
+    @team = current_user.teams if user_signed_in?
   end
 
   def show
