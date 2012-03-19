@@ -14,7 +14,7 @@ class TeamsController < ApplicationController
   end
 
   def create
-    @team = Team.create(params[:team])
+    @team = current_user.teams.create(params[:team])
     if @team.valid?
       flash[:notice] = "Hey look at that, a new team!"
       respond_with @team
