@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    if @user = User.create(params[:user])
+    @user = User.create(params[:user])
+    if @user.valid?
       flash[:notice] = "Nice job, you've created your flock account!"
       sign_in(:user, @user)
     else
