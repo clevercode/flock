@@ -24,6 +24,9 @@ gem 'jquery-rails'
 
 group :development, :test do 
   gem 'rspec-rails'
+  gem 'guard-livereload'
+  gem 'pry'
+  gem 'pry-remote'
 end
 
 group :test do
