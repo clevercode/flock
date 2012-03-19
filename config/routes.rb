@@ -3,6 +3,8 @@ Flock::Application.routes.draw do
 
   devise_for :users
 
+  resources :users
+
   # Omniauth
   match '/omniauth/twitter(/:username)', 
     to: redirect('/auth/twitter?screen_name=%{username}'),
@@ -13,5 +15,4 @@ Flock::Application.routes.draw do
   resources :teams do
     resources :accounts
   end
-
 end
