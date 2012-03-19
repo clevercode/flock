@@ -22,3 +22,7 @@
 
 # Ignore the database config
 config/database.yml
+
+# Ignore the pow environment file
+.powenv
+
