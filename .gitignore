@@ -26,3 +26,5 @@ config/database.yml
 # Ignore the pow environment file
 .powenv
 
+# ignore OS X Finder's poop
+.DS_Store
