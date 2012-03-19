@@ -1,4 +1,36 @@
+@import compass/css3
+
 body
   font:
     family: Helvetica, Arial, sans-serif
     size: 1.2em
+
+  // header content
+  header
+    h1
+      float: left
+      width: 20%
+      margin: 0
+
+    // quick sign in form
+    #sign_in
+      float: right
+      width: 360px
+
+      div
+        width: 200px
+        margin-left: 10px
+        float: left
+        &:first-child
+          margin-left: 0
+        &.email
+        &.password
+
+      input.btn
+        width: 60px
+        margin-top: -1em
+        float: right
+
+  // main content
+  section
+    clear: both
