@@ -3,9 +3,7 @@ class Membership < ActiveRecord::Base
 
   # Associations
   
-  belongs_to :user,
-             :inverse_of => :membership
-  belongs_to :team,
-             :inverse_of => :membership
+  belongs_to :user
+  belongs_to :team
 
 end
