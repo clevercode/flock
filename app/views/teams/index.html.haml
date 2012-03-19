@@ -1,0 +1,7 @@
+%h1 Your Teams
+- if @teams.present?
+  %ul
+    - @teams.each do |team|
+      %li= link_to team.name, team
+- else
+  %p Sorry my friend, you don't belong to a team yet.
