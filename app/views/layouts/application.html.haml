@@ -10,7 +10,7 @@
       %h1= link_to image_tag("flock.png", alt: "Flock"), root_url
       %nav
         %ul
-          %li= link_to "Flock", teams_path
+          %li= link_to "Flocks", teams_path
       - unless user_signed_in?
         #sign_in
           = simple_form_for "user", :url => user_session_path do |f|
