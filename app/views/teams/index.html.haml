@@ -1,7 +1,8 @@
-%h1 Your Teams
+%h1 Your Flocks
 - if @teams.present?
   %ul
     - @teams.each do |team|
       %li= link_to team.name, team
 - else
-  %p Sorry my friend, you don't belong to a team yet.
+  %p Sorry my friend, you don't belong to a flock yet. 
+  %p= link_to "Create a new flock", new_team_path
