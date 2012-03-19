@@ -1,0 +1,7 @@
+- unless user_signed_in?
+  #sign_up
+    %p Create a new flock account
+    = simple_form_for User.new, method: :post do |f|
+      = f.input :email, as: :email, label: false, placeholder: "enter your email"
+      = f.input :password, as: :password, label: false, placeholder: "pick a password"
+      = f.button :submit
