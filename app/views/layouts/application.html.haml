@@ -6,6 +6,21 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %h1= link_to "Flock", root_url
-    
-    = yield
+    %header
+      %h1= link_to image_tag("flock.png", alt: "Flock"), root_url
+      %nav
+      - unless user_signed_in?
+        #sign_in
+          = simple_form_for "user", :url => user_session_path do |f|
+            = f.input :email, as: :email, label: false, placeholder: "email"
+            = f.input :password, as: :password, label: false, placeholder: "password"
+            = f.submit "Sign In", class: "btn"
+      - else
+        %p= link_to "Sign Out", destroy_user_session_path, method: :delete
+    %section
+      #flash
+        - if flash[:notice]
+          %p.notice= flash[:notice]
+        - if flash[:error]
+          %p.notice= flash[:error]
+      = yield
