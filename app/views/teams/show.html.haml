@@ -1,0 +1,16 @@
+%h1= @team.name
+
+%section.team_accounts
+  %header
+    Twitter Accounts
+
+  %ul
+    - @team.accounts.each do |account|
+      %li[account]
+        = account.username
+        %small (#{account.state})
+    %li
+      = link_to "Add Twitter Account", new_team_account_path(@team)
+      
+
+    

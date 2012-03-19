@@ -9,6 +9,9 @@ gem "high_voltage"
 gem 'devise', '~> 2.0.4'
 gem 'simple_form', '~> 2.0.1'
 
+gem 'omniauth', '~> 1.0.3'
+gem 'omniauth-twitter', '~> 0.0.8'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
